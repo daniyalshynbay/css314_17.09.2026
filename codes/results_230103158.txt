@@ -1,0 +1,53 @@
+    **Task 1 results:**
+
+    "C:\Users\Daniyal Shynbay\AppData\Local\Programs\Python\Python313\python.exe" "C:\Users\Daniyal Shynbay\Desktop\SDU 7 Semester\Parallel Computing\3 Week\codes\task1_amdahl.py"
+    OS Reported Logical Cores: 12
+    Single Process Baseline Time T(1): 2.3256s
+
+    Cores | Time(s) | Observed Speedup | Theoretical Linear
+    -------------------------------------------------------
+        1 |  2.2985 |             1.01x |               1.00x
+        2 |  1.2369 |             1.88x |               2.00x
+        4 |  0.7354 |             3.16x |               4.00x
+        8 |  0.6327 |             3.68x |               8.00x
+       12 |  0.5930 |             3.92x |              12.00x
+       16 |  0.7308 |             3.18x |              16.00x
+
+    Process finished with exit code 0
+
+    **Task 2 results:**
+
+    "C:\Users\Daniyal Shynbay\AppData\Local\Programs\Python\Python313\python.exe" "C:\Users\Daniyal Shynbay\Desktop\SDU 7 Semester\Parallel Computing\3 Week\codes\task2_falsesharing.py"
+    Running Adjacent (False Sharing)...
+    Running Padded (Cache-Aligned)...
+    Adjacent Trials: [0.908695600000101, 0.8959440999997241, 0.9109432000000197] | Median: 0.9087s
+    Padded Trials: [0.9176568999996562, 0.8987039000003278, 0.9022220000001653] | Median: 0.9022s
+    Slowdown Factor: 1.01x
+
+    Process finished with exit code 0
+
+    **Task 3 results:**
+
+    "C:\Users\Daniyal Shynbay\AppData\Local\Programs\Python\Python313\python.exe" "C:\Users\Daniyal Shynbay\Desktop\SDU 7 Semester\Parallel Computing\3 Week\codes\task3_sync.py"
+    Unsafe: Value = 2,000,000 / 2,000,000 | Time: 0.1182s
+    Locked: Value = 2,000,000 / 2,000,000 | Time: 0.3799s
+    Lockless: Value = 2,000,000 / 2,000,000 | Time: 0.0602s
+    Contention Cost Multiplier (Locked/Unsafe): 3.21x
+    Lockless Speedup over Locked: 6.32x
+
+    Process finished with exit code 0
+
+    **Task 4 results:**
+
+    "C:\Users\Daniyal Shynbay\AppData\Local\Programs\Python\Python313\python.exe" "C:\Users\Daniyal Shynbay\Desktop\SDU 7 Semester\Parallel Computing\3 Week\codes\task4_roofline.py"
+    === Compute-Bound Suite (Register Math) ===
+    Workers: 1 | Time: 1.3034s | Scaling: 1.00x
+    Workers: 2 | Time: 1.6585s | Scaling: 1.27x
+    Workers: 4 | Time: 1.4296s | Scaling: 1.10x
+
+    === Memory-Bound Suite (DRAM Bandwidth Saturation) ===
+    Workers: 1 | Time: 0.5402s | Degradation: 1.00x
+    Workers: 2 | Time: 0.6248s | Degradation: 1.16x
+    Workers: 4 | Time: 1.0492s | Degradation: 1.94x
+
+    Process finished with exit code 0
